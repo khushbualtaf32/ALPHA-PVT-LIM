@@ -1,0 +1,82 @@
+/* css/style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.75em; /* 75% larger than section text */
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.section {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 40px 15px 15px 15px;
+    float: left;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 30px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 1.25em; /* 25% larger than section text */
+    font-weight: bold;
+    text-align: center;
+}
+
+#chicken .section-title {
+    background-color: #ffc0cb;
+}
+
+#beef .section-title {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#sushi .section-title {
+    background-color: #ffffcc;
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        width: calc(33.33% - 30px);
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #chicken, #beef {
+        width: calc(50% - 30px);
+    }
+    #sushi {
+        width: calc(100% - 30px);
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: calc(100% - 30px);
+    }
+}
